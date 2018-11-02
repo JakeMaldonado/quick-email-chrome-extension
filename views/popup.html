@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <script src="scripts/vue.js"></script>
+      <script src="scripts/app.js"></script>
+      <link rel="stylesheet" type="text/css" href="/styles/popup.css">
+    </head>
+    <body>
+      <div>
+        <ul class="templatenav" role="navigation">
+          <li><i v-if="active" class="fa fa-home"></i>Contacts</li>
+          <li><i class="fa fa-bell-o"></i>Snippets</li>
+          <li class="torch_flame"><img src="/images/flame.svg"></li>
+          <li><i class="fa fa-envelope-o"></i>Templates</li>
+          <li><i class="fa fa-envelope-o"></i>Settings</li>
+        </ul>
+      </div>
+      <div>
+        <ul class="subtemplatenav" role="subnavigation">
+          <li><i v-if="active" class="fa fa-home"></i>Current Snippets</li>
+          <li><i class="fa fa-bell-o"></i>New Snippets</li>
+        </ul>
+      </div>
+      <div class="form-wrapper">
+        <div class="container">
+          <form action="action_page.php">
+            <div class="row">
+              <div class="col-25">
+                <label for="subject">Snippet Code:</label>
+              </div>
+              <div class="col-75">
+                <input type="text" id="subject" name="subject" placeholder="Your subject...">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25">
+                <label for="subject">Snippet Description:</label>
+              </div>
+              <div class="col-75">
+                <input type="text" id="subject" name="subject" placeholder="Your snippet description...">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25">
+                <label for="body">Snippet Contents:</label>
+              </div>
+              <div class="col-75">
+                <textarea id="body" name="body" placeholder="Write something amazing..." style="height:100px"></textarea>
+              </div>
+            </div>
+            <div class="row">
+              <input type="submit" value="SAVE TEMPLATE">
+            </div>
+          </form>
+        </div>
+      </div>
+    </body>
+  </html>

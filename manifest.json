@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "Torch Quick Email",
+  "version": "1.0",
+  "permissions": [
+    "https://mail.google.com/*",
+    "https://inbox.google.com/*",
+    "<all_urls>",
+    "storage"
+  ],
+  "content_scripts" : [
+    {
+      "matches": ["https://mail.google.com/*", "https://inbox.google.com/*"],
+      "js": ["/scripts/inboxsdk.js", "/scripts/app.js"]
+    }
+  ],
+  "browser_action": {
+    "default_popup": "/views/popup.html"
+  }
+}
